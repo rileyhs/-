@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Orbitron", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-rog-red: #ff0032;
+  --color-rog-dark: #0b0b0b;
+  --color-rog-surface: #1a1a1a;
+  --color-rog-border: #2d2d2d;
+}
+
+@layer base {
+  body {
+    @apply bg-rog-dark text-white antialiased;
+  }
+}
+
+.rog-glow {
+  box-shadow: 0 0 15px rgba(255, 0, 50, 0.3);
+}
+
+.rog-border-clip {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+}
+
+.rog-grid-bg {
+  background-image: radial-gradient(circle at 2px 2px, rgba(255, 0, 50, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
